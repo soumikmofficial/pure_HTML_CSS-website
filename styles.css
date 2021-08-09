@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Poppins:wght@400;500;600;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -57,10 +56,12 @@ button {
   text-transform: capitalize;
   font-size: 2rem;
   cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 1px 2px 5px grey;
 }
 
 header nav {
-  height: 12rem;
+  height: 15vh;
   display: flex;
   align-items: center;
   padding: 0 20rem;
@@ -106,11 +107,107 @@ header .nav-right button {
   font-weight: 600;
   color: var(--primary-color);
   background: var(--ligt-grey);
-  box-shadow: 1px 2px 5px grey;
-  transition: all 0.2s;
 }
 
 .nav-right button:hover {
   color: white;
   background: var(--primary-color);
+}
+
+.hero-section {
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  padding: 0rem 20rem 15rem 20rem;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.hero-left {
+  width: 50%;
+  /* margin-bottom: 7rem; */
+}
+
+.hero-section .hero-left h1 {
+  width: 40rem;
+  font-size: 4.2rem;
+  font-weight: 600;
+  line-height: 5rem;
+  margin-bottom: 1.2rem;
+}
+
+.hero-left p {
+  color: var(--pink-color);
+  font-size: 2.2rem;
+  /* font-weight: 600; */
+}
+
+.hero-left button {
+  font-size: 1.5rem;
+  font-weight: 600;
+  background-color: var(--primary-color);
+  color: var(--ligt-grey);
+  box-shadow: 1px 2px 5px grey;
+  padding: 1rem 2rem;
+  margin-top: 6rem;
+}
+
+.hero-left button:hover {
+  color: var(--primary-color);
+  background: var(--ligt-grey);
+}
+
+.hero-right {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  box-shadow: 0 3px 3px -2px var(--pink-color);
+}
+.hero-section .hero-right img {
+  right: 0;
+  width: 45rem;
+}
+
+/* ..........about section............... */
+
+.about-section {
+  background: var(--purple-color);
+  padding: 15rem 20rem;
+  display: flex;
+}
+
+.about-left {
+  /* background: yellow; */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 40%;
+  min-width: 38rem;
+  overflow: hidden;
+  border-radius: 50%;
+  height: inherit;
+}
+
+.about-left img {
+  width: 50rem;
+}
+
+.about-right {
+  /* background: green; */
+  padding-left: 15rem;
+  height: inherit;
+  width: 60%;
+  min-width: 57rem;
+}
+.about-right .about-head {
+  color: var(--pink-color);
+  margin-bottom: 5rem;
+  font-size: 5rem;
+  font-weight: 500;
+  /* text-transform: uppercase; */
+}
+
+.about-right .about-text {
+  font-size: 1.8rem;
+  line-height: 3.5rem;
 }
