@@ -232,6 +232,12 @@ header .nav-right button {
   max-width: 27%;
   box-shadow: 1px 1px 8px grey;
   flex-direction: column;
+  transition: all 0.3s;
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: translateY(-10%);
 }
 
 .card-img {
@@ -256,5 +262,4 @@ header .nav-right button {
   color: var(--deep-grey);
   width: 90%;
   margin: 0 auto;
-  /* background: yellow; */
 }
