@@ -68,6 +68,7 @@ label {
   display: block;
 }
 
+/* ..........header starts................ */
 header nav {
   height: 15vh;
   display: flex;
@@ -148,7 +149,41 @@ header .nav-right button {
 .hero-left p {
   color: var(--pink-color);
   font-size: 2.2rem;
-  /* font-weight: 600; */
+  font-weight: 600;
+  width: fit-content;
+  border-right: 0.2rem solid var(--pink-color);
+  animation: type 10s infinite steps(26), caret 1s infinite step-end;
+  white-space: nowrap;
+  overflow: hidden;
+  /* background: yellow; */
+}
+
+@keyframes caret {
+  0%,
+  100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--pink-color);
+  }
+}
+
+@keyframes type {
+  0% {
+    width: 0ch;
+  }
+  30% {
+    width: 23ch;
+  }
+  80% {
+    width: 23ch;
+  }
+  90% {
+    width: 0ch;
+  }
+  100% {
+    width: 0ch;
+  }
 }
 
 .hero-left button {
@@ -236,20 +271,18 @@ header .nav-right button {
   max-width: 27%;
   box-shadow: 1px 1px 8px grey;
   flex-direction: column;
-  transition: all 0.8s;
+  transition: all 0.5s;
 }
 
-.card:hover .card-img {
+.card:hover {
   cursor: pointer;
-  /* transform: translateY(-10%); */
-  transform: rotate(360deg);
+  transform: translateY(-10%);
 }
 
 .card-img {
   height: 50%;
   display: flex;
   align-items: center;
-  transition: all 0.9s;
 }
 .card-img img {
   width: 100%;
