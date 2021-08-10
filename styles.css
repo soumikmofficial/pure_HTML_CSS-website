@@ -19,6 +19,7 @@ body {
   --header-font: poppins;
   --normal-font: Nunito;
   --main-padding: 15rem 20rem;
+  background: var(--light-grey);
 }
 
 h1,
@@ -80,7 +81,7 @@ header nav .nav-left {
   /* justify-content: space-between; */
   align-items: center;
 }
-header nav .nav-left .brand {
+.brand {
   font-size: 1.5rem;
   margin-right: 10rem;
 }
@@ -341,3 +342,56 @@ header .nav-right button {
 }
 
 /* .......footer section................ */
+
+footer {
+  padding: 6rem 20rem;
+  display: flex;
+}
+
+footer .footer-left {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer-left p {
+  color: var(--deep-grey);
+  font-size: 1.3rem;
+}
+
+footer .footer-right {
+  width: 60%;
+  /* background: yellow; */
+  padding-left: 15rem;
+  display: flex;
+}
+
+footer li {
+  font-size: 1.3rem;
+  font-family: Nunito;
+}
+
+footer .sub-div-1,
+.sub-div-2 {
+  width: 50%;
+}
+
+.sub-div-1 {
+  min-height: 9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sub-div-2 i {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.sub-div-2 p {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  display: inline;
+  margin-left: 1rem;
+}
