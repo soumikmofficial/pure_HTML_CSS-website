@@ -161,10 +161,16 @@ label {
     /* background: yellow; */
     display: flex;
     flex-direction: column;
+<<<<<<< HEAD
     padding: 3rem 2rem;
     /* justify-content: space-between; */
     align-items: center;
     position: relative;
+=======
+    padding: 1rem 2rem;
+    justify-content: space-around;
+    align-items: center;
+>>>>>>> c5bd1780a68409e9a3c98b88df383d38cca2b796
   }
 
   .hero-left {
@@ -187,8 +193,11 @@ label {
   .hero-right {
     width: 100%;
     text-align: center;
+<<<<<<< HEAD
     /* background: red; */
     margin-top: 5rem;
+=======
+>>>>>>> c5bd1780a68409e9a3c98b88df383d38cca2b796
   }
 
   .hero-right img {
@@ -198,7 +207,10 @@ label {
 
   .extra-button {
     display: block;
+<<<<<<< HEAD
     position: absolute;
     bottom: 5rem;
+=======
+>>>>>>> c5bd1780a68409e9a3c98b88df383d38cca2b796
   }
 }
