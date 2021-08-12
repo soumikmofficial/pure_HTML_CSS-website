@@ -75,9 +75,9 @@ label {
   nav {
     display: flex;
     align-items: center;
-    /* background: pink; */
     height: 10vh;
     padding: 0 2rem;
+    background: pink;
   }
 
   .nav-left {
