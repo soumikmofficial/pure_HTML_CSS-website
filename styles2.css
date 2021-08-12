@@ -68,6 +68,56 @@ label {
   display: block;
 }
 
+/* ........................hero section...................... */
+
+.hero-left p {
+  font-size: 2.2rem;
+  color: var(--pink-color);
+  font-weight: 600;
+  border-right: 0.2rem solid var(--pink-color);
+  animation: type 10s infinite steps(26), caret 1s infinite step-end;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@keyframes caret {
+  0%,
+  100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--pink-color);
+  }
+}
+
+@keyframes type {
+  0% {
+    width: 0ch;
+  }
+  30% {
+    width: 23ch;
+  }
+  80% {
+    width: 23ch;
+  }
+  90% {
+    width: 0ch;
+  }
+  100% {
+    width: 0ch;
+  }
+}
+
+.check-us-btn {
+  font-size: 1.5rem;
+  font-weight: 600;
+  background-color: var(--primary-color);
+  color: var(--ligt-grey);
+  box-shadow: 1px 2px 5px grey;
+  padding: 1rem 2rem;
+  /* width: fit-content; */
+}
+
 @media (max-width: 768px) {
   html {
     font-size: 55%;
@@ -77,7 +127,7 @@ label {
     align-items: center;
     height: 10vh;
     padding: 0 2rem;
-    background: pink;
+    /* background: pink; */
   }
 
   .nav-left {
@@ -104,5 +154,46 @@ label {
 
   .nav-right {
     display: none;
+  }
+
+  .hero-section {
+    height: 90vh;
+    /* background: yellow; */
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-left h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-left button {
+    display: none;
+  }
+
+  .hero-right {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-right img {
+    width: 70%;
+    box-shadow: 0 3px 3px -2px var(--pink-color);
+  }
+
+  .extra-button {
+    display: block;
   }
 }
