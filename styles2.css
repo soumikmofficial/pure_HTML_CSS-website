@@ -68,111 +68,38 @@ label {
   display: block;
 }
 
-.hero-section,
-.about-section,
-.card-section,
-.contact-section,
-footer {
-  padding: 2% 10%;
-  min-width: 945px;
-}
-
-header {
-  padding: 0 10%;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  font-family: poppins;
-  background: pink;
-  height: 10vh;
-  min-width: 752px;
-}
-
-.nav-left {
-  width: 50%;
-  min-width: 459px;
-  display: flex;
-  align-items: center;
-  /* background: blue; */
-}
-
-.nav-brand {
-  width: 50%;
-  /* min-width: 205px; */
-  font-size: 1.5rem;
-  /* background: green; */
-}
-
-.nav-menu {
-  /* background: red; */
-  width: 50%;
-  display: flex;
-  text-transform: capitalize;
-}
-
-.nav-menu a {
-  margin-left: 5rem;
-  color: var(--pink-color);
-  font-size: 1.4rem;
-  font-weight: 600;
-  text-transform: capitalize;
-  font-family: var(--header-font);
-  transition: all 0.2s;
-}
-
-.hamburger {
-  display: none;
-}
-
-.nav-right {
-  width: 50%;
-  min-width: 289px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  /* background: green; */
-}
-
-.nav-right button {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: var(--primary-color);
-  background: var(--ligt-grey);
-}
-
-.hero-section {
-  height: 90vh;
-  background: yellow;
-}
-
 @media (max-width: 768px) {
-  .hero-section,
-  .about-section,
-  .card-section,
-  .contact-section,
-  footer {
-    padding: 2% 10%%;
+  html {
+    font-size: 55%;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    /* background: pink; */
+    height: 10vh;
+    padding: 0 2rem;
   }
 
   .nav-left {
     width: 100%;
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+    /* background: green; */
+    height: inherit;
   }
 
   .nav-brand {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+  }
+
+  .nav-left i {
+    color: var(--primary-color);
+    font-size: 3rem;
   }
 
   .nav-menu {
     display: none;
-  }
-
-  .hamburger {
-    display: block;
-    font-size: 2.5rem;
-    color: var(--primary-color);
   }
 
   .nav-right {
