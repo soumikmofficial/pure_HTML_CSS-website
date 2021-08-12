@@ -158,10 +158,10 @@ label {
 
   .hero-section {
     height: 90vh;
-    /* background: yellow; */
+    background: yellow;
     display: flex;
     flex-direction: column;
-    padding: 10% 2%;
+    padding: 5% 2% 20% 2%;
     justify-content: space-around;
     align-items: center;
   }
