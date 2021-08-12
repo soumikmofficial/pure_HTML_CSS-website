@@ -162,16 +162,15 @@ label {
     display: flex;
     flex-direction: column;
     padding: 3rem 2rem;
-    /* justify-content: space-between; */
+    justify-content: space-around;
     align-items: center;
-    position: relative;
   }
 
   .hero-left {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 80%;
     text-align: center;
   }
 
@@ -187,17 +186,17 @@ label {
   .hero-right {
     width: 100%;
     text-align: center;
-    margin-top: 3rem;
+    padding-bottom: 6rem;
   }
 
   .hero-right img {
-    width: 70%;
+    width: 80%;
     box-shadow: 0 3px 3px -2px var(--pink-color);
   }
 
   .extra-button {
     display: block;
-    position: absolute;
-    bottom: 5rem;
+    /* position: absolute; */
+    /* bottom: 5rem; */
   }
 }
