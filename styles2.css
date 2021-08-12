@@ -161,7 +161,7 @@ label {
     /* background: yellow; */
     display: flex;
     flex-direction: column;
-    padding: 3rem 2rem;
+    padding: 10% 2%;
     justify-content: space-around;
     align-items: center;
   }
