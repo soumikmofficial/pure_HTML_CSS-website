@@ -69,14 +69,16 @@ label {
 }
 
 /* ..........header starts................ */
+header {
+  padding: 0 20rem;
+}
 header nav {
   height: 15vh;
   display: flex;
   align-items: center;
-  padding: 0 20rem;
 }
 
-header nav .nav-left {
+nav .nav-left {
   width: 50%;
   display: flex;
   /* justify-content: space-between; */
@@ -105,13 +107,13 @@ header nav .nav-left .nav-menu {
   color: var(--primary-color);
 }
 
-header .nav-right {
+.nav-right {
   width: 50%;
   display: flex;
   justify-content: flex-end;
 }
 
-header .nav-right button {
+.nav-right button {
   font-size: 1.4rem;
   font-weight: 600;
   color: var(--primary-color);
@@ -138,7 +140,7 @@ header .nav-right button {
   width: 50%;
 }
 
-.hero-section .hero-left h1 {
+.hero-left h1 {
   width: 40rem;
   font-size: 4.2rem;
   font-weight: 600;
@@ -186,7 +188,8 @@ header .nav-right button {
   }
 }
 
-.hero-left button {
+.hero-left button,
+.extra-button {
   font-size: 1.5rem;
   font-weight: 600;
   background-color: var(--primary-color);
@@ -204,13 +207,16 @@ header .nav-right button {
   width: 50%;
   display: flex;
   justify-content: flex-end;
-  box-shadow: 0 3px 3px -2px var(--pink-color);
-}
-.hero-section .hero-right img {
-  right: 0;
-  width: 45rem;
 }
 
+.hero-right img {
+  width: 45rem;
+  box-shadow: 0 3px 3px -2px var(--pink-color);
+}
+
+.extra-button {
+  display: none;
+}
 /* ..........about section............... */
 
 .about-section {
@@ -240,14 +246,14 @@ header .nav-right button {
   width: 60%;
   min-width: 57rem;
 }
-.about-right .about-head {
+.about-head {
   color: var(--pink-color);
   margin-bottom: 5rem;
   font-size: 5rem;
   font-weight: 500;
 }
 
-.about-right .about-text {
+about-text {
   font-size: 1.8rem;
   line-height: 3.5rem;
 }
@@ -427,4 +433,167 @@ footer .sub-div-1,
   font-size: 1.3rem;
   display: inline;
   margin-left: 1rem;
+}
+
+/* ...................social section.....................
+ */
+
+.social {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.social a {
+  font-family: Nunito;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 1.5rem;
+  width: 24rem;
+  color: white;
+  transform: translateX(-21rem);
+  transition: all 0.5s linear;
+  padding: 0.2rem;
+  font-weight: 500;
+  border-radius: 0 5px 5px 0;
+}
+
+.social a:hover {
+  transform: translateX(0);
+}
+
+.social .fab {
+  font-size: 3rem;
+  margin-left: 1rem;
+  animation: zoomIn 3s alternate-reverse infinite;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* ........phone view............... */
+
+@media (max-width: 770px) {
+  header,
+  .hero-section,
+  .about-section,
+  .card-section,
+  .contact-section,
+  .footer {
+    padding: 2% 2%;
+  }
+
+  header {
+    height: 10vh;
+    background: pink;
+  }
+
+  header nav {
+    flex-direction: column;
+  }
+
+  nav .nav-left {
+    width: 100%;
+    background: green;
+  }
+
+  nav .nav-right {
+    width: 100%;
+    align-items: center;
+    height: inherit;
+    background: yellow;
+    display: none;
+  }
+
+  .hero-section {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+  }
+
+  .hero-left {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 5rem;
+    text-align: center;
+  }
+
+  .hero-left h1 {
+    width: 50%;
+    min-width: 27rem;
+    margin: 0 auto;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-left p {
+    margin: 0 auto;
+  }
+
+  .hero-left button {
+    display: none;
+  }
+  .hero-right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-right img {
+    width: 50%;
+    min-width: 30rem;
+  }
+
+  .extra-button {
+    display: block;
+  }
+
+  .about-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-left {
+    width: 100%;
+    text-align: center;
+    border-radius: 0;
+    margin-bottom: 5rem;
+    /* background: pink; */
+    margin-bottom: 6rem;
+  }
+
+  .about-left img {
+    width: 35%;
+    min-width: 200px;
+  }
+
+  .about-right {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-head {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  .about-text {
+    font-size: 1.5rem;
+    line-height: 3.5rem;
+    width: 80%;
+    min-width: 56rem;
+  }
 }
