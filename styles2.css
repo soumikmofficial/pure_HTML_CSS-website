@@ -167,8 +167,8 @@ label {
     /* background: yellow; */
     display: flex;
     flex-direction: column;
-    padding: 5rem 3rem;
-    /* justify-content: space-around; */
+    /* padding: 5rem 3rem; */
+    justify-content: space-around;
     align-items: center;
   }
 
@@ -191,7 +191,7 @@ label {
   .hero-right {
     width: 100%;
     text-align: center;
-    margin: 3rem 0 8rem 0;
+    /* margin: 3rem 0 8rem 0; */
   }
 
   .hero-right img {
