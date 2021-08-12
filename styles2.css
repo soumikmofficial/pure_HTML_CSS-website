@@ -71,7 +71,7 @@ label {
 /* ........................hero section...................... */
 
 .hero-left h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   margin-bottom: 2rem;
   line-height: 5rem;
 }
@@ -178,6 +178,10 @@ label {
     align-items: center;
     width: 80%;
     text-align: center;
+  }
+
+  .hero-left span {
+    display: block;
   }
 
   .hero-left button {
