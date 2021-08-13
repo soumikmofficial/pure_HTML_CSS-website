@@ -68,7 +68,79 @@ label {
   display: block;
 }
 
+/* .........nav section....................... */
+
+nav {
+  /* background: pink; */
+  display: flex;
+  align-items: center;
+  padding: 0 15rem;
+  height: 15vh;
+}
+
+.nav-left {
+  display: flex;
+  width: 50%;
+  justify-content: flex-start;
+}
+
+.nav-brand {
+  font-size: 1.5rem;
+  transition: all 0.2s;
+}
+
+.nav-brand:hover {
+  transform: rotate(-3deg);
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  margin-left: 8rem;
+}
+
+.nav-menu a {
+  color: var(--pink-color);
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  font-family: var(--header-font);
+  margin-right: 3rem;
+  transition: all 0.2s;
+}
+
+.nav-menu a:hover {
+  color: var(--primary-color);
+}
+
+.hamburger {
+  display: none;
+}
+
+.nav-right {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nav-right button {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  background: var(--ligt-grey);
+}
+
+.nav-right button:hover {
+  color: white;
+  background: var(--primary-color);
+}
+
 /* ........................hero section...................... */
+
+.hero-section {
+  height: 85vh;
+}
 
 .hero-left h1 {
   font-size: 3rem;
@@ -124,16 +196,22 @@ label {
   /* width: fit-content; */
 }
 
+.extra-button {
+  display: none;
+}
+
+/* ............mobile view........................  */
+
 @media (max-width: 768px) {
   html {
     font-size: 55%;
   }
   nav {
     display: flex;
-    align-items: center;
-    height: 10vh;
+    /* align-items: center; */
     padding: 0 2rem;
     /* background: pink; */
+    height: 10vh;
   }
 
   .nav-left {
@@ -145,13 +223,10 @@ label {
     height: inherit;
   }
 
-  .nav-brand {
-    font-size: 1.5rem;
-  }
-
-  .nav-left i {
+  .hamburger {
     color: var(--primary-color);
-    font-size: 3rem;
+    font-size: 2rem;
+    display: block;
   }
 
   .nav-menu {
@@ -201,7 +276,5 @@ label {
 
   .extra-button {
     display: block;
-    /* position: absolute; */
-    /* bottom: 5rem; */
   }
 }
