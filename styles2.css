@@ -178,7 +178,7 @@ nav {
   background-color: var(--primary-color);
   color: var(--ligt-grey);
   /* box-shadow: 1px 2px 5px grey;   */
-  padding: 1.5% 3%;
+  padding: 2% 5%;
   width: fit-content;
 }
 
@@ -300,6 +300,10 @@ nav {
     display: flex;
     justify-content: center;
     margin-top: 15%;
+  }
+
+  .check-us-btn {
+    font-size: 2rem;
   }
 }
 
