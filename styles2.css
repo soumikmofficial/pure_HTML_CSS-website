@@ -18,7 +18,8 @@ body {
   --purple-color: #2f2e41;
   --header-font: poppins;
   --normal-font: Nunito;
-  --main-padding: 15rem 20rem;
+  --main-padding: 12rem 20rem;
+  --mobile-padding: 2rem 2rem;
   background: var(--light-grey);
 }
 
@@ -71,91 +72,135 @@ label {
 /* .........nav section....................... */
 
 nav {
-  /* background: pink; */
-  display: flex;
-  align-items: center;
-  padding: 0 15rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
   height: 15vh;
-}
-
-.nav-left {
-  display: flex;
-  width: 50%;
-  justify-content: flex-start;
+  /* background: pink; */
+  background: #f8f8fa;
 }
 
 .nav-brand {
-  font-size: 1.5rem;
-  transition: all 0.2s;
+  /* background: red; */
+  grid-column: 2/5;
+  display: flex;
+  align-items: center;
 }
 
-.nav-brand:hover {
-  transform: rotate(-3deg);
+.nav-brand h2 {
+  font-weight: 600;
+  font-size: 2.2rem;
 }
 
 .nav-menu {
+  grid-column: 5/9;
   display: flex;
   align-items: center;
-  margin-left: 8rem;
 }
 
 .nav-menu a {
-  color: var(--pink-color);
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  text-transform: capitalize;
   font-family: var(--header-font);
-  margin-right: 3rem;
-  transition: all 0.2s;
+  text-transform: capitalize;
+  color: var(--pink-color);
+  margin-right: 5rem;
 }
 
-.nav-menu a:hover {
-  color: var(--primary-color);
-}
-
-.hamburger {
-  display: none;
-}
-
-.nav-right {
-  width: 50%;
+.nav-button {
+  grid-column: 9/12;
   display: flex;
-  align-items: center;
   justify-content: flex-end;
+  align-items: center;
 }
 
-.nav-right button {
+.nav-button button {
   font-size: 1.4rem;
   font-weight: 600;
   color: var(--primary-color);
   background: var(--ligt-grey);
 }
 
-.nav-right button:hover {
+.nav-button button:hover {
   color: white;
   background: var(--primary-color);
 }
 
-/* ........................hero section...................... */
+/* ############## hero section ########################## */
 
 .hero-section {
   height: 85vh;
+  display: flex;
+  /* grid-template-columns: repeat(12, 1fr); */
+  /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
+  /* background: pink; */
+  /* padding: 10% 20%; */
+  align-items: center;
+}
+
+.hero-wrapper {
+  width: 65%;
+  display: flex;
+  margin: 0 auto;
+  align-content: center;
+}
+
+.hero-left {
+  width: 50%;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
 }
 
 .hero-left h1 {
-  font-size: 3rem;
-  margin-bottom: 2rem;
-  line-height: 5rem;
+  font-size: 4rem;
+  line-height: 140%;
+}
+
+.hero-left span {
+  display: block;
 }
 
 .hero-left p {
-  font-size: 2.2rem;
   color: var(--pink-color);
+  font-size: 1.8rem;
   font-weight: 600;
+  width: fit-content;
   border-right: 0.2rem solid var(--pink-color);
   animation: type 10s infinite steps(26), caret 1s infinite step-end;
   white-space: nowrap;
   overflow: hidden;
+  margin: 4% 0 10%;
+}
+
+.check-us-btn {
+  font-size: 1.2rem;
+  font-weight: 600;
+  background-color: var(--primary-color);
+  color: var(--ligt-grey);
+  /* box-shadow: 1px 2px 5px grey;   */
+  padding: 1.5% 3%;
+  width: fit-content;
+}
+
+.hero-right {
+  width: 50%;
+  /* grid-column: 7/11; */
+  /* grid-row: 3/7; */
+  /* background: steelblue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  /* background: pink; */
+}
+
+.hero-right img {
+  width: 90%;
+  box-shadow: 0 3px 3px -2px var(--pink-color);
+}
+
+.hero-button {
+  display: none;
 }
 
 @keyframes caret {
@@ -185,78 +230,58 @@ nav {
     width: 0ch;
   }
 }
-
-.check-us-btn {
-  font-size: 1.5rem;
-  font-weight: 600;
-  background-color: var(--primary-color);
-  color: var(--ligt-grey);
-  box-shadow: 1px 2px 5px grey;
-  padding: 1.5rem 2.5rem;
-  /* width: fit-content; */
-}
-
-.extra-button {
-  display: none;
-}
-
 /* ............mobile view........................  */
 
-@media (max-width: 768px) {
+@media (max-width: 770px) {
   html {
-    font-size: 55%;
+    font-size: 52%;
   }
   nav {
-    display: flex;
-    /* align-items: center; */
-    padding: 0 2rem;
-    /* background: pink; */
-    height: 10vh;
-  }
-
-  .nav-left {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     /* background: green; */
-    height: inherit;
+    grid-template-columns: 3fr 1fr;
+    padding: 0 6%;
   }
 
-  .hamburger {
-    color: var(--primary-color);
-    font-size: 2rem;
-    display: block;
+  .nav-brand {
+    /* background: yellow; */
+    grid-column: 1/2;
+    /* width: 100%; */
   }
 
   .nav-menu {
     display: none;
   }
 
-  .nav-right {
+  .nav-button {
     display: none;
   }
 
-  .hero-section {
-    height: 90vh;
-    /* background: yellow; */
+  .hamburger {
+    display: block;
+    /* background: pink; */
     display: flex;
-    flex-direction: column;
-    padding: 5rem 3rem;
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items: center;
+  }
+
+  .hamburger i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+  }
+
+  .hero-wrapper {
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    /* background: yellow; */
   }
 
   .hero-left {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80%;
+    /* background: pink; */
+    width: 100%;
     text-align: center;
-  }
-
-  .hero-left span {
-    display: block;
+    align-items: center;
   }
 
   .hero-left button {
@@ -265,16 +290,21 @@ nav {
 
   .hero-right {
     width: 100%;
-    text-align: center;
-    margin-bottom: 10rem;
+    align-items: center;
   }
 
-  .hero-right img {
-    width: 75%;
-    box-shadow: 0 3px 3px -2px var(--pink-color);
-  }
-
-  .extra-button {
+  .hero-button {
     display: block;
+    /* background: red; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 15%;
+  }
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 58%;
   }
 }
