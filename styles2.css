@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;500;600;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +16,7 @@ html {
 body {
   --primary-color: #1d4e89;
   --pink-color: #ff6584;
-  --ligt-grey: #f6f6f6;
+  --ligt-grey: #f8f8fa;
   --deep-grey: #767d9f;
   --purple-color: #2f2e41;
   --header-font: poppins;
@@ -37,7 +40,7 @@ h4 {
 }
 
 p {
-  font-family: var(--normal-font);
+  font-family: var(--normal-font), sans-serif;
   font-size: 2.6rem;
   color: white;
 }
@@ -86,6 +89,13 @@ nav {
   align-items: center;
 }
 
+.nav-brand a {
+  transition: all 0.3s ease;
+}
+.nav-brand a:hover {
+  transform: rotate(-4deg);
+}
+
 .nav-brand h2 {
   font-weight: 600;
   font-size: 2.2rem;
@@ -104,6 +114,10 @@ nav {
   text-transform: capitalize;
   color: var(--pink-color);
   margin-right: 5rem;
+}
+
+.nav-menu a:hover {
+  color: var(--primary-color);
 }
 
 .nav-button {
@@ -125,15 +139,13 @@ nav {
   background: var(--primary-color);
 }
 
-/* ############## hero section ########################## */
+/* *############## hero section ########################## */
 
 .hero-section {
   height: 85vh;
   display: flex;
-  /* grid-template-columns: repeat(12, 1fr); */
-  /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
   /* background: pink; */
-  /* padding: 10% 20%; */
+  padding: 10% 0;
   align-items: center;
 }
 
@@ -142,6 +154,7 @@ nav {
   display: flex;
   margin: 0 auto;
   align-content: center;
+  /* background: blue; */
 }
 
 .hero-left {
@@ -149,6 +162,7 @@ nav {
   display: flex;
   flex-flow: column;
   justify-content: flex-end;
+  /* background: red; */
 }
 
 .hero-left h1 {
@@ -164,16 +178,17 @@ nav {
   color: var(--pink-color);
   font-size: 1.8rem;
   font-weight: 600;
-  width: fit-content;
+  /* background: yellow; */
   border-right: 0.2rem solid var(--pink-color);
-  animation: type 10s infinite steps(26), caret 1s infinite step-end;
+  animation: type 10s infinite steps(26, end), caret 1s infinite step-end;
+  width: fit-content;
   white-space: nowrap;
   overflow: hidden;
   margin: 4% 0 10%;
 }
 
 .check-us-btn {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 600;
   background-color: var(--primary-color);
   color: var(--ligt-grey);
@@ -182,11 +197,12 @@ nav {
   width: fit-content;
 }
 
+.check-us-btn:hover {
+  transform: translateY(-20%);
+}
+
 .hero-right {
   width: 50%;
-  /* grid-column: 7/11; */
-  /* grid-row: 3/7; */
-  /* background: steelblue; */
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -218,10 +234,10 @@ nav {
     width: 0ch;
   }
   30% {
-    width: 23ch;
+    width: 26ch;
   }
   80% {
-    width: 23ch;
+    width: 26ch;
   }
   90% {
     width: 0ch;
@@ -230,22 +246,263 @@ nav {
     width: 0ch;
   }
 }
-/* ............mobile view........................  */
+
+/* *.............................about section.................. */
+
+.about-section {
+  min-height: 100vh;
+  background: var(--purple-color);
+  display: flex;
+  align-items: center;
+  padding: 10% 0%;
+}
+
+.about-wrapper {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  /* background: pink; */
+}
+
+.about-left {
+  width: 35%;
+  /* background: yellow; */
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  /* border-radius: 100%; */
+}
+
+.about-left img {
+  width: 100%;
+}
+
+.about-right {
+  width: 65%;
+  display: flex;
+  /* background: pink; */
+  flex-direction: column;
+  justify-content: space-between;
+  /* align-items: flex-end; */
+  padding-left: 12%;
+}
+
+.about-head {
+  font-size: 4.5rem;
+  color: var(--pink-color);
+  margin-bottom: 9%;
+}
+.about-text {
+  font-size: 1.8rem;
+  line-height: 250%;
+}
+
+/* *...........................cards section................ */
+
+.cards-section {
+  min-height: 100vh;
+  background: var(--light-grey);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding: 10% 0;
+}
+
+#card-header {
+  font-size: 4.5rem;
+  color: var(--primary-color);
+  margin-bottom: 9%;
+}
+
+.cards-wrapper {
+  width: 70%;
+  /* background: yellow; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  min-width: 24rem;
+  max-width: 28rem;
+  width: 26%;
+  background: var(--light-grey);
+  min-height: 32rem;
+  margin: 0 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: 0 2px 0.7rem grey;
+  padding: 3rem 2rem;
+  border-radius: 2.5rem;
+  transition: all 0.5s;
+}
+
+.card:hover {
+  transform: scale(1.2);
+}
+
+.card-img {
+  height: 12rem;
+  background-size: cover;
+}
+
+.card-img-1 {
+  background-image: url(./images/responsive.svg);
+}
+
+.card-img-2 {
+  background-image: url(./images/design.svg);
+}
+
+.card-img-3 {
+  background-image: url(./images/search.svg);
+}
+
+.card-info h2 {
+  color: var(--primary-color);
+  margin: 10% 0;
+}
+
+.card-info p {
+  color: var(--purple-color);
+  font-size: 1.5rem;
+}
+
+/* *...............contact section..................... */
+
+.contact-section {
+  background: pink;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 10% 0;
+  background: var(--purple-color);
+  justify-content: center;
+}
+
+.contact-wrapper {
+  width: 70%;
+  display: flex;
+}
+
+.contact-left {
+  width: 35%;
+}
+
+.contact-left h1 {
+  font-size: 3rem;
+  color: var(--pink-color);
+  margin-bottom: 2.5rem;
+}
+
+.contact-left p {
+  font-size: 1.8rem;
+  line-height: 3.5rem;
+}
+
+.contact-right {
+  width: 65%;
+  padding-left: 12%;
+}
+
+.contact-right label {
+  font-family: var(--header-font);
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--pink-color);
+  margin-bottom: 1.5rem;
+}
+
+.contact-right input {
+  width: 100%;
+  border: none;
+  height: 3.5rem;
+  border-radius: 8px;
+  margin-bottom: 2.5rem;
+}
+
+.contact-right input:nth-of-type(3) {
+  height: 11rem;
+}
+
+.contact-right button {
+  border-radius: 7px;
+  width: 100%;
+  font-family: poppins;
+  font-size: 1.8rem;
+  font-weight: 600;
+  background: var(--pink-color);
+  color: white;
+  padding: 0.3rem 0;
+  margin-top: 1.5rem;
+}
+
+/* *.....................footer-section.......................... */
+
+footer {
+  background: var(--light-grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 20rem;
+  /* background: pink; */
+  padding: 3% 0;
+}
+
+.footer-wrapper {
+  width: 70%;
+  /* background: yellow; */
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 2fr 1fr;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-links li {
+  font-size: 1.3rem;
+  font-family: Nunito;
+  margin-bottom: 1.3rem;
+}
+
+.footer-copyright p {
+  font-size: 1rem;
+  color: var(--purple-color);
+}
+
+.sub-div-2 i {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.sub-div-2 p {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  display: inline;
+  margin-left: 1rem;
+}
+/* !............mobile view........................  */
 
 @media (max-width: 770px) {
   html {
     font-size: 52%;
   }
+
+  /* *............header section................. */
+
   nav {
-    /* background: green; */
     grid-template-columns: 3fr 1fr;
     padding: 0 6%;
   }
 
   .nav-brand {
-    /* background: yellow; */
     grid-column: 1/2;
-    /* width: 100%; */
   }
 
   .nav-menu {
@@ -258,7 +515,6 @@ nav {
 
   .hamburger {
     display: block;
-    /* background: pink; */
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -274,11 +530,9 @@ nav {
     justify-content: space-between;
     align-items: center;
     width: 90%;
-    /* background: yellow; */
   }
 
   .hero-left {
-    /* background: pink; */
     width: 100%;
     text-align: center;
     align-items: center;
@@ -295,7 +549,6 @@ nav {
 
   .hero-button {
     display: block;
-    /* background: red; */
     width: 100%;
     display: flex;
     justify-content: center;
@@ -303,7 +556,96 @@ nav {
   }
 
   .check-us-btn {
-    font-size: 2rem;
+    /* font-size: 2rem; */
+  }
+
+  /* *......................about section........................... */
+
+  .about-section {
+    padding: 20% 0;
+  }
+
+  .about-wrapper {
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-left {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 20%;
+  }
+
+  .about-left img {
+    width: 70%;
+  }
+
+  .about-right {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+  }
+
+  /* *....... card section................................ */
+
+  #card-header {
+    font-size: 3.5rem;
+    margin-bottom: 7rem;
+  }
+
+  /* *.................contact section................... */
+
+  .contact-section {
+    padding: 20% 0;
+  }
+
+  .contact-wrapper {
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-left {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 20%;
+    text-align: center;
+  }
+
+  .contact-right {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+  }
+
+  /* *..............footer.................. */
+
+  footer {
+    padding: 2rem 0;
+  }
+
+  .footer-wrapper {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+  }
+
+  .footer-brand {
+    text-align: center;
+    /* background: pink; */
+  }
+  .footer-links {
+    flex-flow: column;
+    text-align: center;
+    /* background: yellow; */
+  }
+
+  .footer-copyright {
+    text-align: center;
+    /* background: steelblue; */
   }
 }
 
@@ -312,3 +654,6 @@ nav {
     font-size: 58%;
   }
 }
+
+/* todo: remove unwanted fonts */
+/* todo: give equal mobile padding to the sections */
