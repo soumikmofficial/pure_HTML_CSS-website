@@ -570,6 +570,7 @@ footer {
   nav {
     grid-template-columns: 3fr 1fr;
     padding: 0 6%;
+    height: 10vh;
   }
 
   .nav-brand {
@@ -594,6 +595,10 @@ footer {
   .hamburger i {
     font-size: 2.5rem;
     color: var(--primary-color);
+  }
+
+  .hero-section {
+    height: 90vh;
   }
 
   .hero-wrapper {
