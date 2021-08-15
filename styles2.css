@@ -521,6 +521,16 @@ footer {
 .social i {
   margin-left: 2rem;
   font-size: 2.5rem;
+  animation: blink 3s linear alternate-reverse infinite;
+}
+
+@keyframes blink {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 /* !............mobile view........................  */
@@ -642,6 +652,10 @@ footer {
     padding: 10rem 0;
   }
 
+  .card:hover {
+    transform: scale(1);
+  }
+
   .cards-section p {
     width: 80%;
   }
@@ -705,6 +719,10 @@ footer {
 
   .footer-copyright {
     text-align: center;
+  }
+
+  .social a:hover {
+    transform: translateX(-20rem);
   }
 }
 
