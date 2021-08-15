@@ -460,15 +460,19 @@ footer {
   grid-template-rows: 2fr 1fr;
 }
 
+.footer-brand {
+  font-size: 1.5rem;
+}
+
 .footer-links {
   display: flex;
   justify-content: space-between;
 }
 
 .footer-links li {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-family: Nunito;
-  margin-bottom: 1.3rem;
+  margin-bottom: 1.1rem;
 }
 
 .footer-copyright p {
@@ -483,15 +487,59 @@ footer {
 
 .sub-div-2 p {
   color: var(--primary-color);
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   display: inline;
   margin-left: 1rem;
 }
+
+/* *.......social section...................... */
+
+.social {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.social a {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 1.5rem;
+  color: white;
+  font-family: var(--normal-font);
+  padding: 0.3rem 0.4rem;
+  transform: translateX(-20.5rem);
+  transition: all 0.5s linear;
+  border-radius: 0.5rem;
+  font-weight: 600;
+}
+
+.social a:hover {
+  transform: translateX(0);
+}
+
+.social i {
+  margin-left: 2rem;
+  font-size: 2.5rem;
+}
+
 /* !............mobile view........................  */
 
 @media (max-width: 770px) {
   html {
     font-size: 52%;
+  }
+
+  .about-section,
+  .contact-section {
+    padding: 20% 0;
+  }
+
+  .about-wrapper,
+  .contact-wrapper {
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
   }
 
   /* *............header section................. */
@@ -561,9 +609,9 @@ footer {
 
   /* *......................about section........................... */
 
-  .about-section {
+  /* .about-section {
     padding: 20% 0;
-  }
+  } */
 
   .about-wrapper {
     width: 80%;
@@ -590,6 +638,18 @@ footer {
 
   /* *....... card section................................ */
 
+  .cards-section {
+    padding: 10rem 0;
+  }
+
+  .cards-section p {
+    width: 80%;
+  }
+
+  .cards-wrapper {
+    width: 80%;
+  }
+
   #card-header {
     font-size: 3.5rem;
     margin-bottom: 7rem;
@@ -597,15 +657,15 @@ footer {
 
   /* *.................contact section................... */
 
-  .contact-section {
+  /* .contact-section {
     padding: 20% 0;
-  }
+  } */
 
-  .contact-wrapper {
+  /* .contact-wrapper {
     width: 80%;
     flex-direction: column;
     align-items: center;
-  }
+  } */
 
   .contact-left {
     width: 100%;
@@ -624,7 +684,7 @@ footer {
   /* *..............footer.................. */
 
   footer {
-    padding: 2rem 0;
+    padding: 6rem 0;
   }
 
   .footer-wrapper {
@@ -640,12 +700,11 @@ footer {
   .footer-links {
     flex-flow: column;
     text-align: center;
-    /* background: yellow; */
+    margin: 4rem 0;
   }
 
   .footer-copyright {
     text-align: center;
-    /* background: steelblue; */
   }
 }
 
@@ -657,3 +716,4 @@ footer {
 
 /* todo: remove unwanted fonts */
 /* todo: give equal mobile padding to the sections */
+/* todo: smooth scrolling on click */
