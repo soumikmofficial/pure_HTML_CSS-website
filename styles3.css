@@ -440,7 +440,8 @@ nav {
   height: 14rem;
 }
 
-.contact-right input:focus {
+.contact-right input:focus,
+#message:focus {
   /* background: blue; */
   box-shadow: 0 0 0 0.8rem var(--pink-color);
 }
@@ -796,11 +797,13 @@ footer {
     font-size: 3rem;
   }
 
-  .contact-right input {
+  .contact-right input,
+  #message {
+    font-size: 3.2rem;
     height: 6.5rem;
   }
 
-  .contact-right input:nth-of-type(3) {
+  #message {
     height: 16rem;
   }
 
