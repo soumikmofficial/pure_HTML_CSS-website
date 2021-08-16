@@ -638,6 +638,7 @@ footer {
     align-items: center;
     margin-right: 15%;
   }
+
   .nav-menu {
     width: 100%;
     padding: 15% 0;
@@ -675,6 +676,10 @@ footer {
 
   #click:checked ~ .nav-menu {
     transform: translateX(0);
+  }
+
+  #click:checked ~ .hamburger i {
+    transform: rotate(90deg);
   }
 
   /* *hero............... */
