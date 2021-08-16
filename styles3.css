@@ -143,6 +143,10 @@ nav {
   background: var(--primary-color);
 }
 
+#click {
+  display: none;
+}
+
 /* *############## hero section ########################## */
 
 .hero-section {
@@ -667,9 +671,6 @@ footer {
   .hamburger i {
     font-size: 3.5rem;
     color: var(--primary-color);
-  }
-  #click {
-    display: none;
   }
 
   #click:checked ~ .nav-menu {
