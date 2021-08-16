@@ -420,16 +420,29 @@ nav {
   margin-bottom: 2rem;
 }
 
-.contact-right input {
+.contact-right input,
+#message {
   width: 100%;
   border: none;
   height: 5rem;
-  border-radius: 8px;
+  border-radius: 0.8rem;
   margin-bottom: 4rem;
+  padding: 2%;
+  font-size: 2.3rem;
+  font-family: nunito;
+  outline: none;
+  /* color: red;     */
+  font-weight: 600;
+  /* letter-spacing: 0.1rem; */
 }
 
-.contact-right input:nth-of-type(3) {
+#message {
   height: 14rem;
+}
+
+.contact-right input:focus {
+  /* background: blue; */
+  box-shadow: 0 0 0 0.8rem var(--pink-color);
 }
 
 .contact-right button {
@@ -452,13 +465,11 @@ footer {
   justify-content: center;
   align-items: center;
   min-height: 20rem;
-  /* background: pink; */
   padding: 3% 0;
 }
 
 .footer-wrapper {
   width: 70%;
-  /* background: yellow; */
   display: grid;
   grid-template-columns: 2fr 2fr;
   grid-template-rows: 2fr 1fr;
@@ -595,7 +606,7 @@ footer {
 
   .about-wrapper,
   .contact-wrapper {
-    width: 80%;
+    width: 90%;
     flex-direction: column;
     align-items: center;
   }
@@ -715,7 +726,8 @@ footer {
   }
 
   .about-text {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
+    /* line-height: 200%; */
   }
 
   /* *....... card section................................ */
@@ -734,6 +746,7 @@ footer {
 
   .card {
     width: 80%;
+    margin-bottom: 8rem;
   }
 
   #card-header {
@@ -819,6 +832,11 @@ footer {
 
   .footer-copyright {
     text-align: center;
+  }
+
+  /* *social */
+  .social i {
+    font-size: 5rem;
   }
 
   .social a:hover {
