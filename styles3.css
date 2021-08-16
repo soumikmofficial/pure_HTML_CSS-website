@@ -585,7 +585,7 @@ footer {
 
 @media (max-width: 1000px) {
   html {
-    font-size: 33%;
+    /* font-size: 33%; */
   }
 
   .about-section,
@@ -710,6 +710,14 @@ footer {
     padding: 0;
   }
 
+  .about-head {
+    font-size: 6.5rem;
+  }
+
+  .about-text {
+    font-size: 3.5rem;
+  }
+
   /* *....... card section................................ */
 
   .cards-section {
@@ -720,17 +728,21 @@ footer {
     transform: scale(1);
   }
 
-  .cards-section p {
-    width: 80%;
-  }
-
   .cards-wrapper {
     width: 80%;
   }
 
+  .card {
+    width: 80%;
+  }
+
   #card-header {
-    font-size: 3.5rem;
-    margin-bottom: 7rem;
+    margin-bottom: 12rem;
+    width: 80%;
+  }
+
+  .card-info p {
+    font-size: 2.8rem;
   }
 
   /* *.................contact section................... */
@@ -757,6 +769,30 @@ footer {
     justify-content: center;
     text-align: center;
     padding: 0;
+  }
+
+  .contact-left h1 {
+    font-size: 5rem;
+  }
+
+  .contact-left p {
+    font-size: 3rem;
+  }
+
+  .contact-right label {
+    font-size: 3rem;
+  }
+
+  .contact-right input {
+    height: 6.5rem;
+  }
+
+  .contact-right input:nth-of-type(3) {
+    height: 16rem;
+  }
+
+  .contact-right button {
+    font-size: 3rem;
   }
 
   /* *..............footer.................. */
