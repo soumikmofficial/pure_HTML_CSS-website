@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;500;600;700&display=swap");
-
 * {
   margin: 0;
   padding: 0;
@@ -490,24 +488,24 @@ footer {
 }
 
 .footer-links li {
-  font-size: 2.6rem;
+  font-size: 2rem;
   font-family: Nunito;
   margin-bottom: 1.1rem;
 }
 
 .footer-copyright p {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: var(--purple-color);
 }
 
 .sub-div-2 i {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   color: var(--primary-color);
 }
 
 .sub-div-2 p {
   color: var(--primary-color);
-  font-size: 2.5rem;
+  font-size: 2rem;
   display: inline;
   margin-left: 1rem;
   font-weight: 600;
@@ -618,32 +616,6 @@ footer {
 
   /* *............header section................. */
 
-  /* nav {
-    display: flex;
-    flex-direction: column;
-    background: pink;
-    height: 100vh;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 5%;
-  }
-
-  .nav-menu {
-    display: flex;
-    flex-direction: column;
-    /* margin-top: 5rem; */
-  /* }
-
-  .nav-menu li {
-    margin-bottom: 25%;
-  }
-
-  .nav-brand {
-    align-self: flex-start;
-  } 
- */
-
   nav {
     height: 10vh;
     display: grid;
@@ -734,7 +706,6 @@ footer {
   .hero-right {
     width: 100%;
     align-items: center;
-    /* background: pink; */
     margin: 2rem 0;
   }
 
@@ -756,10 +727,6 @@ footer {
   }
 
   /* *......................about section........................... */
-
-  /* .about-section {
-    padding: 20% 0;
-  } */
 
   .about-wrapper {
     width: 80%;
@@ -790,7 +757,6 @@ footer {
 
   .about-text {
     font-size: 3.2rem;
-    /* line-height: 200%; */
   }
 
   /* *....... card section................................ */
@@ -822,16 +788,6 @@ footer {
   }
 
   /* *.................contact section................... */
-
-  /* .contact-section {
-    padding: 20% 0;
-  } */
-
-  /* .contact-wrapper {
-    width: 80%;
-    flex-direction: column;
-    align-items: center;
-  } */
 
   .contact-left {
     width: 100%;
@@ -887,7 +843,6 @@ footer {
 
   .footer-brand {
     text-align: center;
-    /* background: pink; */
   }
   .footer-links {
     flex-flow: column;
@@ -912,7 +867,3 @@ footer {
     transform: translateX(-20rem);
   }
 }
-
-/* todo: remove unwanted fonts */
-/* todo: give equal mobile padding to the sections */
-/* todo: smooth scrolling on click */
