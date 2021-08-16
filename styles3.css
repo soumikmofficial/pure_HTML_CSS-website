@@ -660,6 +660,8 @@ footer {
   .hero-right {
     width: 100%;
     align-items: center;
+    /* background: pink; */
+    margin: 2rem 0;
   }
 
   .hero-right img {
@@ -675,7 +677,8 @@ footer {
   }
 
   .check-us-btn {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    padding: 1.8rem 2.8rem;
   }
 
   /* *......................about section........................... */
