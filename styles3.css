@@ -838,6 +838,10 @@ footer {
   }
 
   /* *social */
+
+  .social {
+    top: 80%;
+  }
   .social i {
     font-size: 5rem;
   }
