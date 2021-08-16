@@ -776,6 +776,7 @@ footer {
 
   .card {
     width: 80%;
+    max-width: 40rem;
     margin-bottom: 8rem;
   }
 
@@ -851,8 +852,20 @@ footer {
     margin: 4rem 0;
   }
 
+  .footer-links li {
+    font-size: 2.3rem;
+  }
+
   .footer-copyright {
     text-align: center;
+  }
+
+  .sub-div-2 p {
+    font-size: 2.3rem;
+  }
+
+  .footer-copyright p {
+    font-size: 2.3rem;
   }
 
   /* *social */
