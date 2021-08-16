@@ -121,6 +121,10 @@ nav {
   color: var(--primary-color);
 }
 
+.extra-contact-btn {
+  display: none;
+}
+
 .nav-button {
   grid-column: 9/12;
   display: flex;
@@ -128,7 +132,7 @@ nav {
   align-items: center;
 }
 
-.nav-button button {
+.contact-us-btn {
   font-size: 2.5rem;
   font-weight: 600;
   color: var(--primary-color);
@@ -614,35 +618,93 @@ footer {
 
   /* *............header section................. */
 
+  /* nav {
+    display: flex;
+    flex-direction: column;
+    background: pink;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 5rem; */
+  /* }
+
+  .nav-menu li {
+    margin-bottom: 25%;
+  }
+
+  .nav-brand {
+    align-self: flex-start;
+  } 
+ */
+
   nav {
-    grid-template-columns: 3fr 1fr;
-    padding: 0 6%;
     height: 10vh;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /* padding: 0 10%; */
   }
 
   .nav-brand {
     grid-column: 1/2;
+    margin-left: 5%;
   }
 
+  .hamburger {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 15%;
+  }
   .nav-menu {
-    display: none;
+    width: 100%;
+    padding: 15% 0;
+    background-color: var(--purple-color);
+
+    position: absolute;
+    display: flex;
+    align-items: center;
+    height: 90vh;
+    flex-flow: column;
+    top: 10vh;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+  }
+
+  .nav-menu a {
+    margin-right: 0;
+    margin-bottom: 10%;
+    font-size: 3.6rem;
+  }
+
+  .contact-us-btn {
+    display: block;
+    font-size: 3rem;
   }
 
   .nav-button {
     display: none;
   }
 
-  .hamburger {
-    display: block;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-
   .hamburger i {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     color: var(--primary-color);
   }
+  #click {
+    display: none;
+  }
+
+  #click:checked ~ .nav-menu {
+    transform: translateX(0);
+  }
+
+  /* *hero............... */
 
   .hero-section {
     height: 90vh;
