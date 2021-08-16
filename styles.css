@@ -786,6 +786,7 @@ footer {
     width: 80%;
     max-width: 40rem;
     margin-bottom: 8rem;
+    transform: scale(1);
   }
 
   #card-header {
