@@ -672,6 +672,7 @@ footer {
   .hamburger i {
     font-size: 3.5rem;
     color: var(--primary-color);
+    transition: all 0.3s linear;
   }
 
   #click:checked ~ .nav-menu {
