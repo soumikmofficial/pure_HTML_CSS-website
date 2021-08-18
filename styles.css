@@ -12,15 +12,15 @@ html {
 }
 
 body {
-  --primary-color: #1d4e89;
-  --pink-color: #ff6584;
-  --ligt-grey: #f8f8fa;
   --deep-grey: #767d9f;
-  --purple-color: #2f2e41;
   --header-font: poppins;
-  --normal-font: Nunito;
+  --ligt-grey: #f8f8fa;
   --main-padding: 12rem 20rem;
   --mobile-padding: 2rem 2rem;
+  --normal-font: Nunito;
+  --pink-color: #ff6584;
+  --primary-color: #1d4e89;
+  --purple-color: #2f2e41;
   background: var(--light-grey);
 }
 
@@ -28,8 +28,8 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: var(--header-font);
   color: var(--primary-color);
+  font-family: var(--header-font);
 }
 
 h3,
@@ -38,9 +38,9 @@ h4 {
 }
 
 p {
+  color: white;
   font-family: var(--normal-font), sans-serif;
   font-size: 2.6rem;
-  color: white;
 }
 
 a {
@@ -52,17 +52,17 @@ li {
 }
 
 button {
-  border: none;
   border-radius: 50px;
-  padding: 0.6rem 3rem;
+  border: none;
+  box-shadow: 1px 2px 5px grey;
+  cursor: pointer;
   font-family: var(--header-font);
+  font-size: 2rem;
   font-weight: medium;
   letter-spacing: 0.1rem;
+  padding: 0.6rem 3rem;
   text-transform: capitalize;
-  font-size: 2rem;
-  cursor: pointer;
   transition: all 0.2s;
-  box-shadow: 1px 2px 5px grey;
 }
 
 input,
@@ -73,18 +73,16 @@ label {
 /* .........nav section....................... */
 
 nav {
+  background: #f8f8fa;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   height: 15vh;
-  /* background: pink; */
-  background: #f8f8fa;
 }
 
 .nav-brand {
-  /* background: red; */
-  grid-column: 2/5;
-  display: flex;
   align-items: center;
+  display: flex;
+  grid-column: 2/5;
 }
 
 .nav-brand a {
@@ -95,23 +93,23 @@ nav {
 }
 
 .nav-brand h2 {
-  font-weight: 600;
   font-size: 3.8rem;
+  font-weight: 600;
 }
 
 .nav-menu {
-  grid-column: 5/9;
-  display: flex;
   align-items: center;
+  display: flex;
+  grid-column: 5/9;
 }
 
 .nav-menu a {
+  color: var(--pink-color);
+  font-family: var(--header-font);
   font-size: 2.5rem;
   font-weight: 600;
-  font-family: var(--header-font);
-  text-transform: capitalize;
-  color: var(--pink-color);
   margin-right: 8rem;
+  text-transform: capitalize;
   transition: all 0.2s linear;
 }
 
@@ -124,23 +122,23 @@ nav {
 }
 
 .nav-button {
-  grid-column: 9/12;
-  display: flex;
-  justify-content: flex-end;
   align-items: center;
+  display: flex;
+  grid-column: 9/12;
+  justify-content: flex-end;
 }
 
 .contact-us-btn {
+  background: var(--ligt-grey);
+  color: var(--primary-color);
   font-size: 2.5rem;
   font-weight: 600;
-  color: var(--primary-color);
-  background: var(--ligt-grey);
   transition: all 0.2s linear;
 }
 
 .nav-button button:hover {
-  color: white;
   background: var(--primary-color);
+  color: white;
 }
 
 #click {
@@ -150,27 +148,23 @@ nav {
 /* *############## hero section ########################## */
 
 .hero-section {
-  min-height: 85vh;
-  display: flex;
-  /* background: pink;   */
-  /* padding: 10% 0; */
   align-items: center;
+  display: flex;
   justify-content: center;
+  min-height: 85vh;
 }
 
 .hero-wrapper {
-  width: 65%;
-  display: flex;
   align-content: center;
-  /* background: blue; */
+  display: flex;
+  width: 65%;
 }
 
 .hero-left {
-  width: 50%;
   display: flex;
   flex-flow: column;
   justify-content: flex-end;
-  /* background: red; */
+  width: 50%;
 }
 
 .hero-left h1 {
@@ -183,27 +177,25 @@ nav {
 }
 
 .hero-left p {
+  animation: type 10s infinite steps(26, end), caret 1s infinite step-end;
+  border-right: 0.2rem solid var(--pink-color);
   color: var(--pink-color);
   font-size: 3rem;
   font-weight: 600;
-  /* background: yellow; */
-  border-right: 0.2rem solid var(--pink-color);
-  animation: type 10s infinite steps(26, end), caret 1s infinite step-end;
-  width: fit-content;
-  white-space: nowrap;
-  overflow: hidden;
   margin: 4% 0 10%;
+  overflow: hidden;
+  white-space: nowrap;
+  width: fit-content;
 }
 
 .check-us-btn {
-  font-size: 2.2rem;
-  font-weight: 600;
   background-color: var(--primary-color);
   color: var(--ligt-grey);
-  /* box-shadow: 1px 2px 5px grey;   */
+  font-size: 2.2rem;
+  font-weight: 600;
   padding: 2% 5%;
-  width: fit-content;
   transition: all 0.2s linear;
+  width: fit-content;
 }
 
 .check-us-btn:hover {
@@ -211,18 +203,16 @@ nav {
 }
 
 .hero-right {
-  width: 50%;
+  align-items: flex-end;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: flex-end;
-  /* background: pink; */
+  width: 50%;
 }
 
 .hero-right img {
-  width: 100%;
-  /* max-width: 494px; */
   box-shadow: 0 3px 3px -2px var(--pink-color);
+  width: 100%;
 }
 
 .hero-button {
@@ -260,26 +250,23 @@ nav {
 /* *.............................about section.................. */
 
 .about-section {
-  min-height: 100vh;
+  align-items: center;
   background: var(--purple-color);
   display: flex;
-  align-items: center;
   justify-content: center;
+  min-height: 100vh;
   padding: 10% 0%;
 }
 
 .about-wrapper {
-  width: 70%;
   display: flex;
-  /* background: pink; */
+  width: 70%;
 }
 
 .about-left {
-  width: 35%;
-  /* background: yellow; */
-  display: flex;
   align-items: center;
-  /* border-radius: 100%; */
+  display: flex;
+  width: 35%;
 }
 
 .about-left img {
@@ -287,18 +274,16 @@ nav {
 }
 
 .about-right {
-  width: 65%;
   display: flex;
-  /* background: pink; */
   flex-direction: column;
   justify-content: space-between;
-  /* align-items: flex-end; */
   padding-left: 12%;
+  width: 65%;
 }
 
 .about-head {
-  font-size: 6rem;
   color: var(--pink-color);
+  font-size: 6rem;
   margin-bottom: 9%;
 }
 .about-text {
@@ -309,44 +294,43 @@ nav {
 /* *...........................cards section................ */
 
 .cards-section {
-  min-height: 100vh;
+  align-items: center;
   background: var(--light-grey);
   display: flex;
   flex-direction: column;
-  text-align: center;
-  align-items: center;
+  min-height: 100vh;
   padding: 10% 0;
+  text-align: center;
 }
 
 #card-header {
-  font-size: 6rem;
   color: var(--primary-color);
+  font-size: 6rem;
   margin-bottom: 9%;
 }
 
 .cards-wrapper {
-  width: 70%;
-  /* background: yellow; */
-  display: flex;
-  justify-content: center;
   align-items: center;
+  display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  width: 70%;
 }
 
 .card {
-  max-width: 28rem;
-  width: 26%;
-  min-width: 40rem;
-  min-height: 50rem;
-  margin: 0 2rem 3rem;
+  border-radius: 2.5rem;
+  box-shadow: 0 2px 0.7rem grey;
   display: flex;
   flex-direction: column;
-  text-align: center;
-  box-shadow: 0 2px 0.7rem grey;
+  margin: 0 2rem 3rem;
+  max-width: 28rem;
+  min-height: 50rem;
+  min-width: 40rem;
   padding: 3rem 2rem;
-  border-radius: 2.5rem;
+  text-align: center;
   transform: scale(0.8);
   transition: all 0.5s;
+  width: 26%;
 }
 
 .card:hover {
@@ -354,8 +338,8 @@ nav {
 }
 
 .card-img {
-  height: 25rem;
   background-size: cover;
+  height: 25rem;
 }
 
 .card-img-1 {
@@ -372,8 +356,8 @@ nav {
 
 .card-info h2 {
   color: var(--primary-color);
-  margin: 20% auto 10%;
   font-size: 3rem;
+  margin: 20% auto 10%;
 }
 
 .card-info p {
@@ -385,17 +369,17 @@ nav {
 /* *...............contact section..................... */
 
 .contact-section {
-  min-height: 100vh;
-  display: flex;
   align-items: center;
-  padding: 10% 0;
   background: var(--purple-color);
+  display: flex;
   justify-content: center;
+  min-height: 100vh;
+  padding: 10% 0;
 }
 
 .contact-wrapper {
-  width: 70%;
   display: flex;
+  width: 70%;
 }
 
 .contact-left {
@@ -403,8 +387,8 @@ nav {
 }
 
 .contact-left h1 {
-  font-size: 4.5rem;
   color: var(--pink-color);
+  font-size: 4.5rem;
   margin-bottom: 2.5rem;
 }
 
@@ -414,32 +398,30 @@ nav {
 }
 
 .contact-right {
-  width: 65%;
   padding-left: 12%;
+  width: 65%;
 }
 
 .contact-right label {
-  font-family: var(--header-font);
-  font-weight: bold;
-  font-size: 2.2rem;
   color: var(--pink-color);
+  font-family: var(--header-font);
+  font-size: 2.2rem;
+  font-weight: bold;
   margin-bottom: 2rem;
 }
 
 .contact-right input,
 #message {
-  width: 100%;
-  border: none;
-  height: 5rem;
   border-radius: 0.8rem;
-  margin-bottom: 4rem;
-  padding: 2%;
-  font-size: 2.3rem;
+  border: none;
   font-family: nunito;
-  outline: none;
-  /* color: red;     */
+  font-size: 2.3rem;
   font-weight: 600;
-  /* letter-spacing: 0.1rem; */
+  height: 5rem;
+  margin-bottom: 4rem;
+  outline: none;
+  padding: 2%;
+  width: 100%;
 }
 
 #message {
@@ -448,38 +430,37 @@ nav {
 
 .contact-right input:focus,
 #message:focus {
-  /* background: blue; */
   box-shadow: 0 0 0 0.8rem var(--pink-color);
 }
 
 .contact-right button {
+  background: var(--pink-color);
   border-radius: 7px;
-  width: 100%;
+  color: white;
   font-family: poppins;
   font-size: 2.5rem;
   font-weight: 600;
-  background: var(--pink-color);
-  color: white;
-  padding: 0.8rem 0;
   margin-top: 1.5rem;
+  padding: 0.8rem 0;
+  width: 100%;
 }
 
 /* *.....................footer-section.......................... */
 
 footer {
+  align-items: center;
   background: var(--light-grey);
   display: flex;
   justify-content: center;
-  align-items: center;
   min-height: 20rem;
   padding: 3% 0;
 }
 
 .footer-wrapper {
-  width: 70%;
   display: grid;
   grid-template-columns: 2fr 2fr;
   grid-template-rows: 2fr 1fr;
+  width: 70%;
 }
 
 .footer-brand {
@@ -498,21 +479,21 @@ footer {
 }
 
 .footer-copyright p {
-  font-size: 2rem;
   color: var(--purple-color);
+  font-size: 2rem;
 }
 
 .sub-div-2 i {
-  font-size: 2.2rem;
   color: var(--primary-color);
+  font-size: 2.2rem;
 }
 
 .sub-div-2 p {
   color: var(--primary-color);
-  font-size: 2rem;
   display: inline;
-  margin-left: 1rem;
+  font-size: 2rem;
   font-weight: 600;
+  margin-left: 1rem;
 }
 
 /* *.......social section...................... */
@@ -524,17 +505,17 @@ footer {
 }
 
 .social a {
-  display: flex;
-  justify-content: flex-end;
   align-items: center;
-  font-size: 2rem;
+  border-radius: 0.5rem;
   color: white;
+  display: flex;
   font-family: var(--normal-font);
+  font-size: 2rem;
+  font-weight: 600;
+  justify-content: flex-end;
   padding: 0.6rem 0.4rem;
   transform: translateX(-26.5rem);
   transition: all 0.5s linear;
-  border-radius: 0.5rem;
-  font-weight: 600;
 }
 
 .social a:hover {
@@ -542,9 +523,9 @@ footer {
 }
 
 .social i {
-  margin-left: 2rem;
-  font-size: 3.5rem;
   animation: blink 3s linear alternate-reverse infinite;
+  font-size: 3.5rem;
+  margin-left: 2rem;
 }
 
 @keyframes blink {
@@ -602,10 +583,6 @@ footer {
 /* !............mobile view........................  */
 
 @media (max-width: 1000px) {
-  html {
-    /* font-size: 33%; */
-  }
-
   .about-section,
   .contact-section {
     padding: 20% 0;
@@ -613,18 +590,17 @@ footer {
 
   .about-wrapper,
   .contact-wrapper {
-    width: 90%;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
+    width: 90%;
   }
 
   /* *............header section................. */
 
   nav {
-    height: 10vh;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    /* padding: 0 10%; */
+    height: 10vh;
   }
 
   .nav-brand {
@@ -633,31 +609,30 @@ footer {
   }
 
   .hamburger {
+    align-items: center;
     display: flex;
     justify-content: flex-end;
-    align-items: center;
     margin-right: 15%;
   }
 
   .nav-menu {
-    width: 100%;
-    padding: 15% 0;
-    background-color: var(--purple-color);
-
-    position: absolute;
-    display: flex;
     align-items: center;
-    height: 90vh;
+    background-color: var(--purple-color);
+    display: flex;
     flex-flow: column;
+    height: 90vh;
+    padding: 15% 0;
+    position: absolute;
     top: 10vh;
     transform: translateX(-100%);
     transition: all 0.3s ease;
+    width: 100%;
   }
 
   .nav-menu a {
-    margin-right: 0;
-    margin-bottom: 10%;
     font-size: 3.6rem;
+    margin-bottom: 10%;
+    margin-right: 0;
   }
 
   .contact-us-btn {
@@ -670,8 +645,8 @@ footer {
   }
 
   .hamburger i {
-    font-size: 3.5rem;
     color: var(--primary-color);
+    font-size: 3.5rem;
     transition: all 0.3s linear;
   }
 
@@ -690,16 +665,16 @@ footer {
   }
 
   .hero-wrapper {
+    align-items: center;
     flex-flow: column;
     justify-content: space-between;
-    align-items: center;
     width: 90%;
   }
 
   .hero-left {
-    width: 100%;
-    text-align: center;
     align-items: center;
+    text-align: center;
+    width: 100%;
   }
 
   .hero-left h1 {
@@ -711,9 +686,9 @@ footer {
   }
 
   .hero-right {
-    width: 100%;
     align-items: center;
     margin: 2rem 0;
+    width: 100%;
   }
 
   .hero-right img {
@@ -722,10 +697,10 @@ footer {
 
   .hero-button {
     display: block;
-    width: 100%;
     display: flex;
     justify-content: center;
     margin-top: 15%;
+    width: 100%;
   }
 
   .check-us-btn {
@@ -736,9 +711,9 @@ footer {
   /* *......................about section........................... */
 
   .about-wrapper {
-    width: 80%;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
+    width: 80%;
   }
 
   .about-left {
@@ -752,10 +727,10 @@ footer {
   }
 
   .about-right {
-    width: 100%;
     justify-content: center;
-    text-align: center;
     padding: 0;
+    text-align: center;
+    width: 100%;
   }
 
   .about-head {
@@ -781,10 +756,10 @@ footer {
   }
 
   .card {
-    width: 80%;
-    max-width: 40rem;
     margin-bottom: 8rem;
+    max-width: 40rem;
     transform: scale(1);
+    width: 80%;
   }
 
   #card-header {
@@ -799,17 +774,17 @@ footer {
   /* *.................contact section................... */
 
   .contact-left {
-    width: 100%;
     justify-content: center;
     margin-bottom: 20%;
     text-align: center;
+    width: 100%;
   }
 
   .contact-right {
-    width: 100%;
     justify-content: center;
-    text-align: center;
     padding: 0;
+    text-align: center;
+    width: 100%;
   }
 
   .contact-left h1 {
@@ -855,8 +830,8 @@ footer {
   }
   .footer-links {
     flex-flow: column;
-    text-align: center;
     margin: 4rem 0;
+    text-align: center;
   }
 
   .footer-links li {
